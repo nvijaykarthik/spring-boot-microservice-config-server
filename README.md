@@ -209,3 +209,31 @@ export class FileUploadComponent {
   text-align: center;
 }
 ```
+```
+formatFileSize(bytes: number): string {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+```
+
+
+```
+// app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <app-file-upload (filesSelected)="handleFiles($event)"></app-file-upload>
+  `
+})
+export class AppComponent {
+  handleFiles(files: File[]): void {
+    console.log('Files selected:', files);
+    // Here you would typically upload the files to your server
+  }
+}
+```
