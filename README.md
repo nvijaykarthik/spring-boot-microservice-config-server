@@ -142,6 +142,116 @@ export class FileUploadComponent {
 ```
 # css
 ```
+/* file-upload.component.css */
+.upload-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.file-upload-label {
+  display: block;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.upload-area:hover {
+  border-color: #4a89dc;
+  background-color: #f0f7ff;
+}
+
+.upload-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  fill: #4a89dc;
+}
+
+.upload-title {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.upload-subtitle {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Drag and drop styling */
+.upload-area.drag-over {
+  border-color: #4a89dc;
+  background-color: #e6f0ff;
+}
+
+/* File info styling */
+.file-info {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+.file-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4a89dc;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .upload-container {
+    padding: 10px;
+  }
+  
+  .upload-area {
+    padding: 30px 15px;
+  }
+}
+.success-message {
+  color: #4caf50;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Animation for upload complete */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.file-info {
+  animation: fadeIn 0.5s ease;
+}
 /* Add to your existing CSS */
 .error-message {
   color: #f44336;
