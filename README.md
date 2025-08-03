@@ -1,5 +1,5 @@
 # code
-'''
+```
 // file-upload.component.ts
 import { Component, EventEmitter, Output } from '@angular/core';
 
@@ -88,9 +88,10 @@ export class FileUploadComponent {
     uploadArea.classList.remove('drag-over');
   }
 }
-'''
+```
+# html
+```
 
-'''
 <!-- file-upload.component.html -->
 <div class="upload-container">
   <label class="file-upload-label">
@@ -138,7 +139,9 @@ export class FileUploadComponent {
     <p class="success-message">Upload completed successfully!</p>
   </div>
 </div>
-'''
+```
+# css
+```
 /* Add to your existing CSS */
 .error-message {
   color: #f44336;
@@ -205,6 +208,4 @@ export class FileUploadComponent {
   margin-top: 15px;
   text-align: center;
 }
-'''
-
-'''
+```
